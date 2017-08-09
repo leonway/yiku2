@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="ajax.js"></script>
+		<script>
+			onload=function(){
+				var oul=document.getElementById("rank")
+				ajax({
+					type:"get",
+					url:"http://60.205.181.47/myPHPCode4/getRank.php",
+					data:{},
+					
+					success:function(data){
+						console.log(data)
+					var arr = JSON.parse(data);
+					
+					for(var q=0;q<arr.length;q++){
+						var li=document.createElement("li")
+						oul.appendChild(li)
+						li.innerHTML=arr[q].name+":"+arr[q].score
+					}
+					
+					}
+				})
+			}
+		</script>
+	</head> 
+	<body>
+		<ul id="rank"></ul>
+	</body>
+</html>

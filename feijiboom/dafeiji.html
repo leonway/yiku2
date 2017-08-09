@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/dafeiji.css" />
+	<script src="move.js"></script>
+	<script src="ajax.js"></script>
+	<script src="js/gameEngine.js"></script> 
+	<script src="js/myplane.js"></script>
+	<script src="js/bullet.js"></script>
+	<script src="js/bullet2.js"></script>
+	<script src="js/enemy.js"></script>
+	<script src="js/common.js"></script> 
+	<script src="js/bullet3.js"></script>
+	<script src="js/gift.js"></script>
+	<script>  
+		onload=function(){
+			var olist=document.getElementById("list");
+			var oli=olist.getElementsByTagName("li")
+			var rank=document.getElementById("rank")
+		    var otime=document.getElementById("time")
+			for(var i=0;i<oli.length;i++){
+				oli[i].onclick=function(){ 
+				myPlane.fireInterval=this.value-0; 
+				olist.parentNode.removeChild(olist)
+				gameEngine.init().start();
+				}
+			}
+		}
+	</script> 
+	</head>
+	<body>
+		
+		<div id="main">
+			<div id="time"><span id="h">00</span>&nbsp;<span id="m">00</span>&nbsp;<span id="s">00</span></div>
+			<div id="rank">0</div>
+			<ul id="list">
+				<li value="800">超级困难</li>
+				<li value="600">非常困难</li>
+				<li value="500">比较困难</li>
+				<li value="200">春哥附体</li>
+			</ul>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,15 @@
+
+
+飞机大战排行榜接口： 
+
+提交分数： 
+     	接口： http://60.205.181.47/myPHPCode4/uploadScore.php
+    请求方式： post
+	参数： name=玩家
+	       score=分数
+
+获取排行榜:
+	接口： http://60.205.181.47/myPHPCode4/getRank.php
+    请求方式： get
+	参数： 无
+	

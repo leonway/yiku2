@@ -1,0 +1,143 @@
+*{margin: 0;padding: 0;border: none;}
+html,body{width: 100%;height: 100%;overflow: hidden;}
+ul,li{list-style: none;}
+
+/*主菜单*/
+#main{
+	width: 480px;
+	height: 100%;
+	margin: 0 auto;
+	background:url(../images2/bg.jpg) repeat-y ;
+	position: relative;
+}
+
+#main #time{
+	padding: 6px;
+	background: orange;
+	font-size: 14px;
+	text-align: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#main #rank{
+	padding: 10px;
+	background: pink;
+	font-size: 14px;
+	text-align: center;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+#main #list{
+	width: 200px;
+	position: absolute;
+	left: 140px;
+	top: 150px;	
+}
+#main #list li{
+	width:198px;
+	height:80px;
+	background: #FF4455;
+	margin-bottom: 10px;
+	border:1px solid #161A1E ;
+	border-radius: 5px;
+	text-align: center;
+	line-height: 80px;
+	color: #FFFFFF;
+	font-family: "微软雅黑";
+	font-size: 30px;
+	cursor: pointer;
+}
+
+/*加载页面*/
+.logo{
+	width:428px;
+	height: 104px;
+	position: absolute;
+	left: 26px;
+	top:30%;
+	background: url(../images2/logo.png) no-repeat;
+}
+.load{
+	width:200px;
+	height: 42px;
+	position: absolute;
+	top: 70%;
+	left: 140px;
+	background: url(../images2/loading1.png) no-repeat;
+}
+
+/*游戏界面*/
+.myplane{
+	width:98px;
+	height: 122px;
+	background: url(../images2/me.png) no-repeat;
+	position: absolute;
+}
+ 
+ .spark {
+				width: 3px;
+				height: 3px;
+				position: absolute;
+}
+
+.gift{
+ 	width:155px;height: 120px;
+ 	background: url(../images2/gift.png) no-repeat;
+ 	position: absolute;
+ }
+
+ .bullet{
+ 	width:7px;height: 18px;
+ 	background: url(../images2/bullet.png) no-repeat;
+ 	position: absolute;
+ }
+ 
+ .nb{
+ 	width:15px;height: 21px;
+ 	background: url(../images2/nb.png) no-repeat;
+ 	position: absolute;
+ }
+ 
+ .nb2{
+ 	width:18px;height: 35px;
+ 	background: url(../images2/nb2.png) no-repeat;
+ 	position: absolute;
+ }
+
+
+.nb3{
+ 	width:35px;height: 32px;
+ 	background: url(../images2/nb3.png) no-repeat;
+ 	position: absolute;
+ }
+.e_bullet{
+	width:6px;height: 16px;
+ 	background: url(../images2/e_bullet.png) no-repeat;
+ 	position: absolute;
+}
+.bullet-die{
+	width:40px;height: 43px;
+	background: url(../images2/die1.png) no-repeat;
+	position: absolute;
+}
+
+.enemy-large{
+	width:165px;height: 256px;
+	background: url(../images2/plane3.png) no-repeat;
+	position: absolute;
+}
+
+
+.enemy-middle{
+	width:70px;height:92px;
+	background: url(../images2/plane2.png) no-repeat;
+	position: absolute;
+}
+
+.enemy-small{
+	width:59px;height: 36px;
+	background: url(../images2/plane1.png) no-repeat;
+	position: absolute;
+}
