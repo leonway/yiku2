@@ -1,23 +1,11 @@
 
-class Base {
-	constructor() {
-		//属性
-		this.ele=document.createElement("div")
-		this.ele=Math.random()*1000000+""
-//		[this.ele,this.ele]=[document.createElement("div"),Math.random()*1000000+""]
-	}
-}
-class bullet extends Base{
+function bullet(){
 	
 	//ele:属性
-//	this.ele=document.createElement("div")
-//	this.id=Math.random()*1000000+""
-	constructor() {
-		super();
-	}
-	
+	this.ele=document.createElement("div")
+	this.id=Math.random()*1000000+""
 	//init：方法
-	init(){
+	this.init=function(){
 		gameEngine.ele.appendChild(this.ele)
 		gameEngine.allbullet[this.id]=this
 
@@ -54,13 +42,13 @@ this.ele.style.left=myPlane.ele.offsetLeft+myPlane.ele.offsetWidth/2-this.ele.of
 	}
 	
 	//move:方法
-	move(){
-	  let that=this
-	  let speedx = 0;
-	  let ss= that.ele.offsetLeft+10+gameEngine.Firelevel*3
-		this.timer=setInterval(()=>{
-		let y=that.ele.offsetTop-5-gameEngine.Firelevel
-		let currentx = parseInt(that.ele.offsetLeft);
+	this.move=function(){
+	  var that=this
+	  var speedx = 0;
+	  var ss= that.ele.offsetLeft+10+gameEngine.Firelevel*3
+		this.timer=setInterval(function(){
+		var y=that.ele.offsetTop-5-gameEngine.Firelevel
+		var currentx = parseInt(that.ele.offsetLeft);
 		speedx += (ss-currentx)/(10-gameEngine.Firelevel);
 		if(y<-18){
 			gameEngine.ele.removeChild(that.ele)
@@ -79,13 +67,13 @@ this.ele.style.left=myPlane.ele.offsetLeft+myPlane.ele.offsetWidth/2-this.ele.of
 	
 	
 	//方法  boom  
-	boom(){
+	this.boom=function(){
 		this.ele.className="bullet-die"
 		clearInterval(this.timer)
-		let i=0;
-		let that=this
-		let imgs=["images2/die1.png","images2/die2.png"]
-	  let dietimer=setInterval(()=>{
+		var i=0;
+		var that=this
+		var imgs=["images2/die1.png","images2/die2.png"]
+	  var dietimer=setInterval(function(){
 	  	if(i>=1){
 	  		clearInterval(dietimer)
 	  		gameEngine.ele.removeChild(that.ele)
@@ -95,7 +83,7 @@ this.ele.style.left=myPlane.ele.offsetLeft+myPlane.ele.offsetWidth/2-this.ele.of
 	}
 	
 	//stop
-	Stop(){
+	this.Stop=function(){
 		clearInterval(this.timer)
 	}
 	
